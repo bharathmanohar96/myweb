@@ -4,7 +4,7 @@
 	<groupId>in.javahome</groupId>
 	<artifactId>myweb</artifactId>
 	<packaging>war</packaging>
-	<version>8.2.0</version>
+	<version>8.3.2</version>
 	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
 	
@@ -12,7 +12,11 @@
 		<docker.image.prefix>kammana</docker.image.prefix>
 	</properties>	
 	<dependencies>
-
+		<dependency>
+		    <groupId>com.oracle.bedrock</groupId>
+		    <artifactId>bedrock-runtime-maven</artifactId>
+		    <version>5.1.2</version>
+		</dependency>
 		
 		<dependency>
 			<groupId>junit</groupId>
@@ -34,6 +38,14 @@
 		    <url>http://13.233.230.166:8081/repository/maven-releases/</url>
 		</repository>
   	</distributionManagement>
+	
+	<pluginRepositories>
+	    <pluginRepository>    
+		<id>maven1</id>
+		<name>Maven.org</name>
+		<url>http://repo1.maven.org/maven2</url>
+	    </pluginRepository>
+	</pluginRepositories>
 
 	
 </project>
