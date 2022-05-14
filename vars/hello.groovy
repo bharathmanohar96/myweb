@@ -1,4 +1,4 @@
-def call(tomcatid, warname, credid) {
+def call('tomcatid', 'warname', 'credid',) {
   sshagent(['${credid}']) {
                     // some block
                     sh "scp -o StrictHostKeyChecking=no target/*.war ${tomcatid}:/home/ec2-user/tomcat8/webapps/${warname}.war"
